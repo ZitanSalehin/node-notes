@@ -1,0 +1,4 @@
+Single-Threaded Nature of Node.js:
+Node.js is single-threaded, meaning it operates on a single thread in the event loop. This allows for non-blocking I/O operations, making it efficient for handling asynchronous tasks. However, if one operation blocks the thread, it can slow down the entire server.
+
+Here's a simple example to illustrate how Node.js's single-threaded nature works:
