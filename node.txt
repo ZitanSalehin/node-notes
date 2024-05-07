@@ -6,3 +6,22 @@ Here's a simple example to illustrate how Node.js's single-threaded nature works
 
 #The header tells the server details about the request such as what type of data the client, user, or request wants in the response. Type can be html , text , JSON , cookies or others.
 
+
+#Node. js Global Objects are the objects that are available in all modules. Global Objects are built-in objects that are part of the JavaScript and can be used directly in the application without importing any particular module.
+
+
+
+#os and path are both modules in Node.js, but they serve different purposes.
+
+os Module: The os module provides operating system-related utility methods and properties. It allows you to access information about the operating system on which the Node.js process is running. Some common functionalities provided by the os module include:
+Retrieving information about the operating system platform.
+Getting information about the system's memory, CPU, network interfaces, etc.
+Providing methods for working with file paths (os.tmpdir(), os.homedir(), etc.).
+path Module: The path module, on the other hand, is specifically designed for working with file and directory paths. It provides methods for manipulating file paths cross-platform. Some common functionalities provided by the path module include:
+Joining and resolving file paths (path.join(), path.resolve()).
+Parsing file paths (path.parse()).
+Normalizing file paths (path.normalize()).
+Getting the basename or directory name of a path (path.basename(), path.dirname()).
+In summary, while the os module deals with operating system-related functionalities, the path module is focused on working with file paths in a platform-independent manner.
+
+
