@@ -4,6 +4,7 @@
 const path = require('path');
 const os = require('os');
 const {add,substract,multiply,divide} = require('./basicOperation');
+const fs = require('fs');
 
 // console.log(os);
 // console.log(os.type());
@@ -21,4 +22,9 @@ console.log(add(10,20));
 console.log(substract(60,20));
 console.log(multiply(10,20));
 console.log(divide(40,20));
+
+fs.readFile('./readWriteFile/readfile.txt', 'utf8', (err,data)=>{
+    if(err) throw error;
+    console.log(data);
+})
 
