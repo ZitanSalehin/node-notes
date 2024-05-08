@@ -2,9 +2,9 @@
 // var nodeServerWithPages = require('./nodeServerWithPages');
 // console.log(global);
 const path = require('path');
-const os = require('os');
-const {add,substract,multiply,divide} = require('./basicOperation');
-const fs = require('fs');
+// const os = require('os');
+// const {add,substract,multiply,divide} = require('./basicOperation');
+const fsPromises = require('fs').promises;
 
 // console.log(os);
 // console.log(os.type());
@@ -18,10 +18,10 @@ const fs = require('fs');
 // console.log(path.dirname(__filename));
 // console.log(path.basename(__filename));
 // console.log(path.extname(__filename));
-console.log(add(10,20));
-console.log(substract(60,20));
-console.log(multiply(10,20));
-console.log(divide(40,20));
+// console.log(add(10,20));
+// console.log(substract(60,20));
+// console.log(multiply(10,20));
+// console.log(divide(40,20));
 
 // fs.readFile(path.join(__dirname,'readWriteFile','readfile.txt'), 'utf8', (err,data)=>{
 //     if(err) throw error;
@@ -48,7 +48,18 @@ console.log(divide(40,20));
 //     console.log("update completed");
 // });
 
-
+const fileOps = async () =>{
+  try {
+    const data = await fsPromises.readFile(path.join(__dirname,'readWriteFile','readfileTwo.txt'), 'utf8');
+    console.log(data);
+    await fsPromises.writeFile(path.join(__dirname,'readWriteFile','promiseWrite.txt'), 'utf8');
+    await fsPromises.writeFile(path.join(__dirname,'readWriteFile','promiseWrite.txt'), 'utf8');
+    await fsPromises.writeFile(path.join(__dirname,'readWriteFile','promiseWrite.txt'), 'utf8');
+  } catch (error) {
+    console.log(error)
+  }
+}
+fileOps();
 
 
 
