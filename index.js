@@ -23,15 +23,34 @@ console.log(substract(60,20));
 console.log(multiply(10,20));
 console.log(divide(40,20));
 
-fs.readFile(path.join(__dirname,'readWriteFile','readfile.txt'), 'utf8', (err,data)=>{
-    if(err) throw error;
-    console.log(data);
-});
+// fs.readFile(path.join(__dirname,'readWriteFile','readfile.txt'), 'utf8', (err,data)=>{
+//     if(err) throw error;
+//     console.log(data);
 
-fs.writeFile(path.join(__dirname,'readWriteFile','wriitenFile.txt'),'nice to meet writing', (err,data)=>{
-    if(err) throw error;
-    console.log("write completed");
-});
+//     fs.appendFile(path.join(__dirname,'readWriteFile','readfile.txt'),'\n\n\ Read file has been updated', (err,data)=>{
+//     if(err) throw error;
+//     console.log("update completed");
+
+//     fs.rename(path.join(__dirname,'readWriteFile','readfile.txt'), path.join(__dirname,'readWriteFile','readfileTwo.txt'), (err,data)=>{
+//     if(err) throw error;
+//     console.log("rename completed");
+// })
+// });
+// });
+
+// fs.writeFile(path.join(__dirname,'readWriteFile','wriitenFile.txt'),'nice to meet writing', (err,data)=>{
+//     if(err) throw error;
+//     console.log("write completed");
+// });
+
+//     fs.appendFile(path.join(__dirname,'readWriteFile','goodToSeeeYou.txt'),'n\n\.Thats the update', (err,data)=>{
+//     if(err) throw error;
+//     console.log("update completed");
+// });
+
+
+
+
 
 console.log('hello....');
 console.log(__dirname);
