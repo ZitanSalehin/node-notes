@@ -23,8 +23,20 @@ console.log(substract(60,20));
 console.log(multiply(10,20));
 console.log(divide(40,20));
 
-fs.readFile('./readWriteFile/readfile.txt', 'utf8', (err,data)=>{
+fs.readFile(path.join(__dirname,'readWriteFile','readfile.txt'), 'utf8', (err,data)=>{
     if(err) throw error;
     console.log(data);
-})
+});
 
+fs.writeFile(path.join(__dirname,'readWriteFile','wriitenFile.txt'),'nice to meet writing', (err,data)=>{
+    if(err) throw error;
+    console.log("write completed");
+});
+
+console.log('hello....');
+console.log(__dirname);
+
+process.on('uncaughtException', (err) => {
+  console.error('Uncaught Exception:', err);
+  process.exit(1);
+});
